@@ -1,0 +1,8 @@
+api_dev:  -p pretty -p html_report -p json_report -p ambiente_dev
+ambiente_qa:  -p pretty -p html_report -p json_report -p ambiente_dev
+
+pretty: --format pretty
+html_report: --format html --out=reports/report.html
+json_report: --format json --out=reports/report.json
+ambiente_dev: AMBIENTE=dev
+ambiente_qa: AMBIENTE=qa
