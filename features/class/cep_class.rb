@@ -76,7 +76,7 @@ class Cep
  end
 
  # Método para listar os endereços consultados com filtros por bairro
- def listar_enderecos_filtrados_por_bairro(dado)
+ def get_listar_enderecos_filtrados_por_bairro(dado)
    $response = HTTParty.get(
       $url_cep[$env] + "/api/v1/zip_accesses/?q[neighborhood_start]=#{dado}",
       body: $request.to_json,
@@ -92,7 +92,7 @@ class Cep
  end
 
  # Método para listar os endereços consultados com paginação
- def listar_enderecos_com_paginacao(pagina, resultados_por_pagina)
+ def get_listar_enderecos_com_paginacao(pagina, resultados_por_pagina)
    $response = HTTParty.get(
       $url_cep[$env] + "/api/v1/zip_accesses",
       body: $request.to_json,
@@ -106,5 +106,7 @@ class Cep
       raise StandardError, "Erro ao listar endereços paginados: #{$response.code}"
     end
  end
+
+ ########## END GET ##########
 
 end
