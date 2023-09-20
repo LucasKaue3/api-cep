@@ -21,7 +21,7 @@ Contexto:
     Então o status da resposta deve ser <status_code>
   Exemplos:
     |    cep      | status_code |
-    | "06414000"  | "404"       |
+    | "12345678"  | "404"       |
 
   @consulta_enderecos_consultados
   Esquema do Cenario: Consulta de Endereços Consultados
